@@ -8,7 +8,7 @@ const Posts = () => {
 
     //componentdidmount() useEffect() 
     useEffect (() => {
-        // Runs after the first render() lifecycle
+        //Runs after the first render() lifecycle
         axios.get('https://jsonplaceholder.typicode.com/posts').then((res) => {
            //set equal to data get from the response
         const responsePosts = res.data;
@@ -23,7 +23,7 @@ const Posts = () => {
             {/* print contents of the array using the map method */}
             {posts && 
             posts.map((post) => {
-                {/*userId & body keys from data */}
+                {/* userId & body keys from data */}
                 const {userId, body} = post;
                 return (
                     <div key={userId}>
