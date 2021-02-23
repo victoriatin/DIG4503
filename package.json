@@ -1,0 +1,19 @@
+{
+  "name": "lab6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victoriatin/DIG4503.git"
+  },
+  "author": "victoria tinsley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victoriatin/DIG4503/issues"
+  },
+  "homepage": "https://github.com/victoriatin/DIG4503#readme"
+}
