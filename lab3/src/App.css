@@ -1,0 +1,23 @@
+div {
+  background-color: #008b8b;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: white;
+  font-size: 40px;
+  font-family: "Paytone One", sans-serif;
+}
+
+h2 {
+  color: black;
+  font-size: 30px;
+  font-family: "Rajdhani", sans-serif;
+}
+
+p {
+  color: white;
+  font-size: 20px;
+  font-family: "Rajdhani", sans-serif;
+}
