@@ -17,10 +17,10 @@ class Clicky extends React.Component {
     render() {
       return (
         <div>
-         <h2> Click the buttons to show or hide text!</h2> <br/>
+         <p> Click the buttons to show or hide text!</p> <br/>
           <button onClick={this._showMessage.bind(null, true)}>Show</button>
           <button onClick={this._showMessage.bind(null, false)}>Hide</button>
-          { this.state.showMessage && (<div><p>Portfolio 1 assignment!</p></div>) }
+          { this.state.showMessage && (<div><h1>Portfolio 1 assignment!</h1></div>) }
         </div>
       );
     }
