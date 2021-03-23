@@ -1,0 +1,65 @@
+<html>
+  <body>
+    <script>
+      // function to be called when the user clicks on the <button> in the AGE form
+      function readAge(event) {
+        event.preventDefault();
+
+        let element = document.querySelector("#age");
+        //uses fetch(), and updates the reporting area
+        fetch("/ages/" + element.value)
+          .then((res) => {
+            return res.json(); //parse the data and create a json object to return
+          })
+          .then((processed) => {
+            let reporting = document.querySelector("#reportingArea");
+
+            //if processes object has an error, the reporting variable will be equal to error message
+            if (processed.error) {
+              reporting.innerHTML = processed.error;
+            } else {
+              reporting.innerHTML = processed.name;
+            }
+          });
+      }
+      // function to be called when the user clicks on the <button> in the NAME form
+      function readName(event) {
+        event.preventDefault();
+
+        let element = document.querySelector("#name");
+        //uses fetch(), and updates the reporting area
+        fetch("/employees/" + element.value)
+          .then((res) => {
+            return res.json(); //parse the data and create a json object to return
+          })
+          .then((processed) => {
+            let reporting = document.querySelector("#reportingArea");
+
+            //if processes object has an error, the reporting variable will be equal to error message
+            if (processed.error) {
+              reporting.innerHTML = processed.error;
+            } else {
+              reporting.innerHTML = processed.age;
+            }
+          });
+      }
+    </script>
+    <!-- form element for an AGE-->
+    <h2>Age</h2>
+    <form onsubmit="readAge(event)">
+      <input id="age" type="text" />
+      <button>Submit</button>
+    </form>
+    <!-- form element for an NAME-->
+    <h2>Name</h2>
+    <form onsubmit="readName(event)">
+      <input id="name" type="text" />
+      <button>Submit</button>
+    </form>
+    <hr />
+    <hr />
+    <!-- reporting area (<div>) that should update with the response from the server -->
+    <h2>Reporting</h2>
+    <div id="reportingArea"></div>
+  </body>
+</html>
