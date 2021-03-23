@@ -48,6 +48,21 @@ App.get('/ages/:number', (req, res) => {
     res.json(result);
 });
 
+// Create a POST request with the route employee/:name/:age
+// Push the user input to the array in database.json 
+App.post('/employee/:name/:age', (req, res) => {
+    let result = {
+        "name": req.params.name,
+        "age": parseInt(req.params.age) //parsing string
+    };
+
+    database.push(result); //push to database the value of result
+                    //file writing on, all properties included, how much space to add for readability purposes
+    fs.writeFileSync("database.json", JSON.stringify(database, null, '\t'));
+
+    res.json(result);
+});
+
 App.listen(port, () => {
     console.log("Server running!");
 });

@@ -43,6 +43,25 @@
             }
           });
       }
+      /* function to be called when the user clicks on the <button> on the combined NAME and AGE form, 
+             uses fetch(), and updates database.json */
+      function createPerson(event) {
+        event.preventDefault();
+
+        let name = document.querySelector("#personName");
+
+        let age = document.querySelector("#personAge");
+
+        fetch("/employee/" + name.value + "/" + age.value, {
+          method: "post",
+        })
+          .then((res) => {
+            return res.json(); //parse the data and create a json object to return
+          })
+          .then((processed) => {
+            console.log(processed);
+          });
+      }
     </script>
     <!-- form element for an AGE-->
     <h2>Age</h2>
@@ -57,6 +76,14 @@
       <button>Submit</button>
     </form>
     <hr />
+    <!-- allow user to input name & age and add to existing database file -->
+    <form onsubmit="createPerson(event)">
+      <h2>Enter name to add</h2>
+      <input id="personName" type="text" />
+      <h2>Enter age to add</h2>
+      <input id="personAge" type="text" />
+      <button>Submit</button>
+    </form>
     <hr />
     <!-- reporting area (<div>) that should update with the response from the server -->
     <h2>Reporting</h2>
