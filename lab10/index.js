@@ -14,7 +14,7 @@ let fileContents = fs.readFileSync("database.json");
 let database = JSON.parse(fileContents);
 
 //Uses Express.static()  to respond with files from the "public" directory 
-App.use("/", Express.static("public"));
+App.use("/", Express.static("client/build"));
 
 // Create a GET route called employees/:name where name is a route parameter. 
 App.get('/employees/:name', (req, res) => {
