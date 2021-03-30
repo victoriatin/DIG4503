@@ -13,7 +13,7 @@ let fileContents = fs.readFileSync("database.json");
 // turning a string into a JSON object (turn fileContents variable into a JSON object)
 let database = JSON.parse(fileContents);
 
-//Uses Express.static()  to respond with files from the "public" directory 
+//Change the server code to serve static files from "client/build" instead of "public"
 App.use("/", Express.static("client/build"));
 
 // Create a GET route called employees/:name where name is a route parameter. 
