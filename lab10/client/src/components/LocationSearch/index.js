@@ -1,11 +1,11 @@
 import React from 'react';
 
-class NameSearch extends React.Component {
-    readName(event) {
+class LocationSearch extends React.Component {
+    readLocation(event) {
         //prevent the 'default' form action
         event.preventDefault();
 //find the element with the id = "name"
-        let element = document.querySelector("#name");
+        let element = document.querySelector("#location");
         //uses fetch(), and updates the reporting area
         fetch("/employees/" + element.value)
           .then((res) => {
@@ -18,18 +18,17 @@ class NameSearch extends React.Component {
             if (processed.error) {
               reporting.innerHTML = processed.error;
             } else {
-              reporting.innerHTML = processed.name;
+              reporting.innerHTML = processed.name + processed.age;
             }
-         
           });
           element.value = "";
       }
       render() {
           return (
            <div>
-                <h2>Name</h2>
-            <form onSubmit={this.readName}>
-                <input id="name" type="text" />
+                <h2>Location</h2>
+            <form onSubmit={this.readLocation}>
+                <input id="location" type="text" />
                 <button>Submit</button>
             </form>
             </div>
@@ -37,4 +36,4 @@ class NameSearch extends React.Component {
       }
     }
 
-    export default NameSearch;
+    export default LocationSearch;
