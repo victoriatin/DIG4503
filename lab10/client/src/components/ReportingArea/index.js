@@ -4,7 +4,7 @@ class ReportingArea extends React.Component {
     render() {
         return (
             <div>
-                <h2>Reporting</h2>
+                <h1>Reporting</h1>
                 <div id="reportingArea"></div>
             </div>
         );

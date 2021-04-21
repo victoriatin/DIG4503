@@ -34,7 +34,7 @@ App.get('/employees/:name', (req, res) => {
 });
 
 // Create a GET route called ages/:number where number is a route parameter. 
-App.get('/ages/:age', (req, res) => {
+App.get('/ages/:number', (req, res) => {
     // If search cannot be found, the route should respond with a JSON object, {error: "not found"}
     let result = {"error": "not found"};
 
@@ -42,7 +42,7 @@ App.get('/ages/:age', (req, res) => {
     {name: "name", age: #}, for exact matches of an age found in database.json */
     // run function for each value in the array
     database.forEach((value) => {
-        if(req.params.age == value.age) { ////if param == value of age in array
+        if(req.params.number == value.age) { ////if param == value of age in array
             result = value;
         }
     });
@@ -56,7 +56,7 @@ App.get('/locations/:location', (req, res) => {
     // If the location is not found, the route should respond with a JSON object, {error: "not found"}
     let result = {"error": "not found"};
 
-    /* use the forEach method to return a JSON object with the property, */
+    /* use the forEach method to return a JSON object with the property */
     // run function for each value in the array
     database.forEach((value) => {
         if(req.params.location == value.location) { //if param == value of location in array
@@ -68,7 +68,7 @@ App.get('/locations/:location', (req, res) => {
 });
 
 
-// Create a POST request with the route employee/:name/:age
+// Create a POST request with the route employee/:name/:age/:location
 // Push the user input to the array in database.json 
 App.post('/employee/:name/:age/:location', (req, res) => {
     let result = {

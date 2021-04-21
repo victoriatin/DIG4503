@@ -19,6 +19,7 @@ class LocationSearch extends React.Component {
               reporting.innerHTML = processed.error;
             } else {
               reporting.innerHTML = processed.name;
+             
             }
           });
           element.value = "";
