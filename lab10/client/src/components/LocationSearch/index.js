@@ -4,10 +4,10 @@ class LocationSearch extends React.Component {
     readLocation(event) {
         //prevent the 'default' form action
         event.preventDefault();
-//find the element with the id = "name"
+//find the element with the id = "location"
         let element = document.querySelector("#location");
         //uses fetch(), and updates the reporting area
-        fetch("/employees/" + element.value)
+        fetch("/locations/" + element.value)
           .then((res) => {
             return res.json(); //parse the data and create a json object to return
           })
@@ -18,7 +18,7 @@ class LocationSearch extends React.Component {
             if (processed.error) {
               reporting.innerHTML = processed.error;
             } else {
-              reporting.innerHTML = processed.name + processed.age;
+              reporting.innerHTML = processed.name;
             }
           });
           element.value = "";
