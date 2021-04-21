@@ -11,9 +11,9 @@ h2 {
 
 button {
   background-color: white;
-  border-radius: 12px;
-  color: #008b8b;
-  padding: 15px 32px;
+  border-radius: 10px;
+  color: Green;
+  padding: 10px;
   text-align: center;
   font-size: 16px;
   transition: all 0.4s ease 0s;
@@ -21,7 +21,7 @@ button {
 
 button:hover {
   color: black;
-  background: #f6b93b;
-  border-color: #f6b93b;
+  background: gray;
+  border-color: gray;
   transition: all 0.4s ease 0s;
 }
