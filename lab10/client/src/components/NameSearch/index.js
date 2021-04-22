@@ -18,7 +18,7 @@ class NameSearch extends React.Component {
             if (processed.error) {
               reporting.innerHTML = processed.error;
             } else {
-              reporting.innerHTML = processed.age;
+              reporting.innerHTML = "Age: " + processed.age + " Location: " + processed.location;
             }
           });
           element.value = "";

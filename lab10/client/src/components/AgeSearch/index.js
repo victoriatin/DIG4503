@@ -18,7 +18,7 @@ class AgeSearch extends React.Component {
             if (processed.error) {
               reporting.innerHTML = processed.error;
             } else {
-              reporting.innerHTML = processed.name;
+              reporting.innerHTML = "Name: " + processed.name + " Location: " + processed.location;
             }
           });
           element.value = "";
