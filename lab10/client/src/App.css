@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans&display=swap");
 .App {
   padding: 20px;
 }
@@ -5,12 +6,12 @@
 h1 {
   color: black;
   font-size: 26px;
-  font-family: "Karla", sans-serif;
+  font-family: "Bree Serif", serif;
 }
 h2 {
   color: darkcyan;
   font-size: 22px;
-  font-family: "Karla", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 button {
@@ -25,7 +26,7 @@ button {
 }
 
 button:hover {
-  color: rgba(41, 107, 76, 0.795);
+  color: darkcyan;
   background: lightgray;
   transition: all 0.4s ease 0s;
 }
@@ -36,4 +37,5 @@ input {
 
 .reportingArea {
   font-size: 18px;
+  font-family: "Open Sans", sans-serif;
 }
