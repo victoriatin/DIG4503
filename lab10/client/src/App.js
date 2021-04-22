@@ -4,6 +4,7 @@ import NameSearch from "./components/NameSearch";
 import AgeSearch from "./components/AgeSearch";
 import LocationSearch from "./components/LocationSearch";
 import ReportingArea from "./components/ReportingArea";
+import AddNew from "./components/AddNew";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       <AgeSearch/>
       <LocationSearch/>
       <ReportingArea/>
+<hr></hr>
+      <AddNew/>
     </div>
   );
 }
