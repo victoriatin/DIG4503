@@ -34,7 +34,7 @@ App.get('/employees/:name', (req, res) => {
 });
 
 // Create a GET route called ages/:number where number is a route parameter. 
-App.get('/ages/:number', (req, res) => {
+App.get('/ages/:age', (req, res) => {
     // If search cannot be found, the route should respond with a JSON object, {error: "not found"}
     let result = {"error": "not found"};
 
@@ -42,7 +42,7 @@ App.get('/ages/:number', (req, res) => {
     {name: "name", age: #}, for exact matches of an age found in database.json */
     // run function for each value in the array
     database.forEach((value) => {
-        if(req.params.number == value.age) { ////if param == value of age in array
+        if(req.params.age == value.age) { ////if param == value of age in array
             result = value;
         }
     });
