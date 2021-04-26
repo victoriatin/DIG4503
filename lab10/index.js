@@ -51,7 +51,7 @@ App.get('/ages/:age', (req, res) => {
 });
 
 
-// Create a GET route called employees/:location where location is a route parameter. 
+// Create a GET route called locations/:location where location is a route parameter. 
 App.get('/locations/:location', (req, res) => {
     // If the location is not found, the route should respond with a JSON object, {error: "not found"}
     let result = {"error": "not found"};
@@ -68,13 +68,33 @@ App.get('/locations/:location', (req, res) => {
 });
 
 
+
+
+// Create a GET route called jobs:role where role is a route parameter. 
+App.get('/jobs/:role', (req, res) => {
+    // If the location is not found, the route should respond with a JSON object, {error: "not found"}
+    let result = {"error": "not found"};
+
+    /* use the forEach method to return a JSON object with the property */
+    // run function for each value in the array
+    database.forEach((value) => {
+        if(req.params.role == value.role) { //if param == value of role in array
+            result = value;
+        }
+    });
+
+    res.json(result);
+});
+
+
 // Create a POST request with the route employee/:name/:age/:location
 // Push the user input to the array in database.json 
-App.post('/employee/:name/:age/:location', (req, res) => {
+App.post('/employee/:name/:age/:location/:role', (req, res) => {
     let result = {
         "name": req.params.name,
         "age": parseInt(req.params.age), //parsing string
-        "location": req.params.location
+        "location": req.params.location,
+        "role": req.params.role
     };
 
     database.push(result); //push to database the value of result

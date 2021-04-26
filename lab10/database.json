@@ -2,31 +2,37 @@
 	{
 		"name": "Angela",
 		"age": 45,
-		"location": "Washington"
+		"location": "Washington",
+		"role": "CEO"
 	},
 	{
 		"name": "Michael",
 		"age": 50,
-		"location": "Georgia"
+		"location": "Georgia",
+		"role": "CTO"
 	},
 	{
 		"name": "Jim",
 		"age": 36,
-		"location": "New York"
+		"location": "New York",
+		"role": "Finance Manager"
 	},
 	{
 		"name": "Kelly",
 		"age": 25,
-		"location": "California"
+		"location": "California",
+		"role": "Project Manager"
 	},
 	{
 		"name": "Ryan",
 		"age": 28,
-		"location": "Colorado"
+		"location": "Colorado",
+		"role": "Human Resources Manager"
 	},
 	{
 		"name": "Victoria",
 		"age": 27,
-		"location": "Florida"
+		"location": "Florida",
+		"role": "Creative Director"
 	}
 ]

@@ -4,7 +4,8 @@ import NameSearch from "./components/NameSearch";
 import AgeSearch from "./components/AgeSearch";
 import LocationSearch from "./components/LocationSearch";
 import ReportingArea from "./components/ReportingArea";
-import AddNew from "./components/AddNew";
+import Role from "./components/JobTitle";
+import JobReporting from "./components/JobReporting";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       <LocationSearch/>
       <ReportingArea/>
 <hr></hr>
-      <AddNew/>
+      <Role/>
+      <JobReporting/>
     </div>
   );
 }
